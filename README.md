@@ -4,7 +4,9 @@
 To develop a convolutional autoencoder for image denoising application.
 
 ## Problem Statement and Dataset
+Images often contain noise due to poor lighting, camera issues, or transmission errors, which reduces their quality. This project aims to develop a Convolutional Autoencoder that can remove noise from images and produce cleaner versions.
 
+The model will be trained using noisy and clean image pairs so that it learns to reconstruct clear images. The goal is to improve image quality while preserving important details.
 
 ## DESIGN STEPS
 ### STEP 1: 
@@ -97,8 +99,8 @@ summary(model, input_size=(1, 28, 28))
 # Train the autoencoder
 def train(model, loader, criterion, optimizer, epochs=5):
     model.train()
-    print("Name: Sivamani Harika")
-    print("Register Number: 212224240155")
+    print("Name: muthurevula sahithi")
+    print("Register Number: 212224040208")
     for epoch in range(epochs):
         running_loss = 0.0
         for images_, _ in loader:
@@ -127,8 +129,8 @@ def visualize_denoising(model, loader, num_images=10):
     noisy_images = noisy_images.cpu().numpy()
     outputs = outputs.cpu().numpy()
 
-    print("Name: Sivamani Harika")
-    print("Register Number: 212224240155")
+    print("Name: muthurevula sahithi")
+    print("Register Number: 212224040208")
     plt.figure(figsize=(18, 6))
     for i in range(num_images):
         # Original
@@ -159,23 +161,6 @@ visualize_denoising(model, test_loader)
 ### Name:muthurevula sahithi
 
 ### Register Number:212224040208
-
-```python
-# Autoencoder Definition
-class DenoisingAutoencoder(nn.Module):
-    def __init__(self):
-
-
-
-# Initialize model
-
-# Training function
-
-# Visualization function
-
-
-```
-
 ### OUTPUT
 <img width="656" height="507" alt="image" src="https://github.com/user-attachments/assets/c8fbcc29-4674-4c68-a550-99118aa71781" />
 
@@ -188,4 +173,4 @@ class DenoisingAutoencoder(nn.Module):
 <img width="1713" height="585" alt="image" src="https://github.com/user-attachments/assets/35eccaa9-580b-441a-bb89-5e24bb785363" />
 
 ## RESULT
-Include your result here
+The Convolutional Autoencoder successfully removed noise from images, producing clearer images that are close to the original clean images. The model effectively learned image features and improved image quality.
